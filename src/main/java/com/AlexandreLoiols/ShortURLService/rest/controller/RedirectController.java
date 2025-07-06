@@ -1,5 +1,6 @@
 package com.AlexandreLoiols.ShortURLService.rest.controller;
 
+import com.AlexandreLoiols.ShortURLService.rest.swagger.RedirectControllerSwagger;
 import com.AlexandreLoiols.ShortURLService.service.UrlService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +12,7 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("/")
-public class RedirectController {
+public class RedirectController implements RedirectControllerSwagger {
 
     private final UrlService urlService;
 

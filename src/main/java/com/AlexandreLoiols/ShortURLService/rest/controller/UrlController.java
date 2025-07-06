@@ -3,6 +3,7 @@ package com.AlexandreLoiols.ShortURLService.rest.controller;
 import com.AlexandreLoiols.ShortURLService.rest.dto.CreatedUrlDto;
 import com.AlexandreLoiols.ShortURLService.rest.dto.UrlDetailsDto;
 import com.AlexandreLoiols.ShortURLService.rest.form.UrlForm;
+import com.AlexandreLoiols.ShortURLService.rest.swagger.UrlControllerSwagger;
 import com.AlexandreLoiols.ShortURLService.service.UrlService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
@@ -14,7 +15,7 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("/api/url")
-public class UrlController {
+public class UrlController implements UrlControllerSwagger {
 
     private final UrlService urlService;
 
