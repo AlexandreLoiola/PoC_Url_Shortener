@@ -16,7 +16,7 @@ public class UrlMapper {
         return urlModel;
     }
 
-    public UrlDetailsDto ModelToUrlDetailsDto(UrlModel urlModel) {
+    public UrlDetailsDto modelToUrlDetailsDto(UrlModel urlModel) {
         UrlDetailsDto urlDetailsDto = new UrlDetailsDto();
         urlDetailsDto.setOriginalUrl(urlModel.getOriginalUrl());
         urlDetailsDto.setShortUrl(urlModel.getShortUrl());
@@ -26,7 +26,7 @@ public class UrlMapper {
         return urlDetailsDto;
     }
 
-    public CreatedUrlDto ModelToCreatedUrlDto(UrlModel urlModel) {
+    public CreatedUrlDto modelToCreatedUrlDto(UrlModel urlModel) {
         CreatedUrlDto createdUrlDto = new CreatedUrlDto();
         createdUrlDto.setOriginalUrl(urlModel.getOriginalUrl());
         createdUrlDto.setShortUrl(urlModel.getShortUrl());

@@ -1,7 +1,9 @@
 package com.AlexandreLoiols.ShortURLService.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
@@ -10,6 +12,8 @@ import java.util.UUID;
 @Getter @Setter
 @Entity
 @Table(name = "TB_URL")
+@AllArgsConstructor
+@NoArgsConstructor
 public class UrlModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -30,4 +34,7 @@ public class UrlModel {
 
     @Column(name = "click_count", nullable = false)
     private Integer clickCount = 0;
+
+    @Column(name = "is_active", nullable = false)
+    private boolean isActive = true;
 }
